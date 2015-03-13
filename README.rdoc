@@ -13,4 +13,16 @@ state_helper.get_name_by_code("UT") # Gets state's name by code, this would retu
 state_helper.get_code_by_name("Utah") # This would get the state code, this would be UT.
 ```
 
+##### To Install
+
+```
+gem install state_helper
+```
+
+#### Or For Bundler like a Rails app
+
+```
+gem 'state_helper'
+```
+
 This project rocks and uses MIT-LICENSE.
