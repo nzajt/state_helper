@@ -69,11 +69,19 @@ module StateHelper
     end
 
     def get_name_by_code code
-      @states.select {|key, value| value == code.upcase}.first.first
+      if good_code(code)
+        @states.select {|key, value| value == code.upcase}.first.first
+      else
+        code
+      end
     end
 
     def get_code_by_name name
       @states[name.titleize]
+    end
+
+    def good_code code
+      @states.map {|key, value| value}.include? code.upcase
     end
 
   end
